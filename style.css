@@ -157,7 +157,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .45)), url('/image/background.webp');
+  background-image: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .45)), url('/image/background.png');
   background-size: cover;
   background-position: center;
   padding: 3rem 0
