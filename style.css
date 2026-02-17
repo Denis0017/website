@@ -84,11 +84,11 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 10px 15px;
-  background: transparent;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
   transition: top 0.4s ease-in-out;
   z-index: 1000;
 }
-
 .navbar.scrolled {
   background: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(8px);
@@ -153,11 +153,11 @@ nav {
 
 /* Hero */
 .hero {
-  min-height: 70vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .45)), url('https://via.placeholder.com/1600x900?text=Global+Trade');
+  background-image: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .45)), url('/image/background.webp');
   background-size: cover;
   background-position: center;
   padding: 3rem 0
@@ -211,7 +211,7 @@ nav {
 
                           .card:hover {
                             transform: translateY(-6px);
-                            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+                            box-shadow: 0 10px 15px rgba(255, 255, 255, 0.09);
                           }
 
                           .card h3 {
@@ -266,7 +266,7 @@ nav {
 
 .btn.ghost {
   background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 1);
   color: var(--white)
 }
 
@@ -283,7 +283,7 @@ nav {
 .heading {
   position: relative;
   color: var(--white);
-  font-size: 1.45rem;
+  font-size: 2rem;
   margin: 0 0 1rem;
   font-weight: 600
 }
@@ -291,44 +291,13 @@ nav {
 .heading::after {
   content: '';
   position: absolute;
+  margin: 5px 0px 0px;
   left: 0;
   top: 38px;
   width: 48px;
   height: 3px;
   background: var(--accent)
 }
-
-/* .grid-3 {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1rem;
-  margin-top: 1rem
-}
-
-.grid-2 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem
-}
-
-.card {
-  background: var(--panel);
-  padding: 1rem;
-  border-radius: var(--radius);
-  text-align: left
-} */
-
-/* .service-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1rem
-} */
-
-/* .service {
-  background: var(--panel);
-  padding: 1rem;
-  border-radius: 8px
-} */
 
 /* Process */
 .process-steps {
@@ -364,6 +333,85 @@ nav {
   margin-top: 0.5rem;
   color: var(--muted)
 }
+
+                          /* Accolades Section */
+                          .accolades {
+                            padding: 5rem 0 4rem;
+                            background: var(--bg);
+                            text-align: center;
+                            overflow: hidden;
+                          }
+
+                          .accolades .container {
+                            max-width: 1100px;
+                            margin: 0 auto;
+                            padding: 0 1.5rem;
+                          }
+
+                          .accolades .eyebrow {
+                            display: inline-block;
+                            font-size: 0.85rem;
+                            font-weight: 600;
+                            letter-spacing: 0.12em;
+                            text-transform: uppercase;
+                            color: var(--white);
+                            margin-bottom: 0.75rem;
+                          }
+
+                          .accolades .title {
+                            font-size: clamp(1.8rem, 3vw, 2.6rem);
+                            font-weight: 700;
+                            line-height: 1.25;
+                            color: var(--muted1);
+                            margin-bottom: 1.25rem;
+                          }
+
+                          .accolades .description {
+                            max-width: 860px;
+                            margin: 0 auto 3rem;
+                            font-size: 1rem;
+                            line-height: 1.7;
+                            color: var(--muted);
+                          }
+
+                          /* Logo Marquee */
+                          .logo-marquee {
+                            position: relative;
+                            width: 100%;
+                            overflow: hidden;
+                          }
+
+                          .marquee-track {
+                            display: flex;
+                            gap: 4rem;
+                            width: max-content;
+                            animation: scroll-marquee 30s linear infinite;
+                          }
+
+                          .marquee-track img {
+                            height: 80px;
+                            width: auto;
+                            object-fit: contain;
+                            filter: grayscale(100%);
+                            opacity: 0.75;
+                            transition: all 0.3s ease;
+                          }
+
+                          .marquee-track img:hover {
+                            filter: grayscale(0%);
+                            opacity: 1;
+                            transform: scale(1.05);
+                          }
+
+                          /* Infinite scroll animation */
+                          @keyframes scroll-marquee {
+                            from {
+                              transform: translateX(0);
+                            }
+                            to {
+                              transform: translateX(-50%);
+                            }
+                          }
 
 /* Contact */
 .contact-grid {
@@ -424,6 +472,73 @@ nav {
             filter: grayscale(0.2) contrast(1.05);
           }
 
+          /* WhatsApp Floating Button */
+          .whatsapp-float {
+            position: fixed;
+            bottom: 24px;
+            left: 24px;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, #25D366, #1EBE5D);
+            border-radius: 999px;
+            padding: 10px;
+            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.35);
+            text-decoration: none;
+            z-index: 9999;
+            overflow: hidden;
+            transition: all 0.3s ease;
+          }
+
+          /* Icon */
+          .whatsapp-icon {
+            width: 36px;
+            height: 36px;
+            display: grid;
+            place-items: center;
+            color: #ffffff;
+          }
+
+          .whatsapp-icon svg {
+            width: 20px;
+            height: 20px;
+          }
+
+          /* Text (Hidden by default) */
+          .whatsapp-text {
+            max-width: 0;
+            opacity: 0;
+            overflow: hidden;
+            white-space: nowrap;
+            color: #ffffff;
+            font-size: 14px;
+            font-weight: 500;
+            padding-left: 0;
+            transition: all 0.35s ease;
+          }
+
+          /* Hover reveal */
+          .whatsapp-float:hover .whatsapp-text {
+            max-width: 200px;
+            opacity: 1;
+            padding-left: 10px;
+          }
+
+          /* Subtle lift on hover */
+          .whatsapp-float:hover {
+            box-shadow: 0 14px 36px rgba(37, 211, 102, 0.45);
+          }
+
+          /* Mobile behavior */
+          @media (max-width: 768px) {
+            .whatsapp-text {
+              display: none;
+            }
+
+            .whatsapp-float {
+              padding: 12px;
+              border-radius: 50%;
+            }
+          }
 
 /* Footer */
 .site-footer {
@@ -478,6 +593,18 @@ nav {
     text-align: right;
     border-radius: 8px
   }
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .marquee-track {
+    gap: 2.5rem;
+    animation-duration: 22s;
+  }
+
+  .marquee-track img {
+    height: 56px;
+  }
+}
 
   .nav-toggle {
     display: block
