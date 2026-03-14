@@ -51,7 +51,7 @@ document.querySelectorAll('a[data-scroll], button[data-scroll]').forEach(el => {
     const target = document.getElementById(targetID);
     if (!target) return;
 
-    const offset = 40;
+    const offset = 70;
     const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
 
     window.scrollTo({ top: targetPosition, behavior: "smooth" });

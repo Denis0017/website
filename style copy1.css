@@ -8,10 +8,6 @@
   --accent: #b4b4b4;   /*off white */
   --white: #ffffff;
   --max-w: 1100px;
-  --width1: 950px;
-  --width2: 900px;
-  --width3: 850px;
-  --width4: 800px;
   --radius: 8px;
 }
 
@@ -132,13 +128,6 @@ nav {
 }
 
 .logo {
-  height: 50px
-}
-
-.footer-logo1 {
-  height: 50px
-}
-.footer-logo2 {
   height: 45px
 }
 
@@ -204,7 +193,7 @@ nav {
 
 
                           .about .lead {
-                            max-width: var(--width1);
+                            max-width: 950px;
                             width: 100%;
                             font-size: 1.05rem;
                             font-weight: 500;
@@ -214,22 +203,15 @@ nav {
                             margin: 0 auto 1rem
                           }
                           
-                          .about .extraabout {
-                            max-width: var(--width2);
-                            /* line-height: 1.5; */
-                            margin-bottom: 1.2rem;
-                            margin: 0 auto 1rem;
-                          } 
-
                           .about .story {
-                            max-width: var(--width2);
+                            max-width: 900px;
                             line-height: 1.75;
                             color: var(--muted);
                             margin-bottom: 1.2rem;
                             margin: 0 auto 1rem;
                           }                            
 
-                          .about .container > p:not(.lead, .muted, .extraabout) {
+                          .about .container > p:not(.lead, .muted) {
                             border-left: 3px solid rgba(255, 255, 255, 0.08);
                             padding-left: 1.2rem;
                           }
@@ -295,7 +277,6 @@ button,
   background: var(--accent);
   color: #111;
   padding: 0.8rem 1.8rem;
-  margin: 10px 0px;
   border-radius: 6px;
   text-decoration: none;
   border: 0;
@@ -316,73 +297,6 @@ button,
   box-shadow: 0 5px 10px rgba(0,0,0,0.25);
 }
 
-                                    /* PRODUCTS & TRADING PORTFOLIO */
-
-                                    .portfolio .lead {
-                                      max-width: var(--width1);
-                                      margin: auto;
-                                      /* margin-bottom: 70px; */
-                                      color: var(--white);
-                                    }
-
-                                    /* Section blocks */
-
-                                    .portfolio-block {
-                                      max-width: var(--width2);
-                                      margin: 0px auto 0px;
-                                    }
-
-                                    .portfolio-block h3 {
-                                      /* font-size: 55px; */
-                                      margin-bottom: 15px;
-                                      border-left: 4px solid var(--muted);
-                                      padding-left: 12px;
-                                    }
-
-                                    .portfolio-block p {
-                                      max-width: var(--width3);
-                                      margin: auto;
-                                      color: var(--muted1);
-                                      line-height: 1.7;
-                                    }
-
-                                    /* Lists */
-
-                                    .portfolio-list {
-                                      max-width: var(--width4);
-                                      margin: auto;
-                                      columns: 2;
-                                      column-gap: 40px;
-                                      padding-left: 18px;
-                                    }
-
-                                    .portfolio-list li {
-                                      margin-top: 8px;
-                                      margin-bottom: 8px;
-                                    }
-
-                                    /* Chemicals grid */
-
-                                    .chemical-grid {
-                                      display: grid;
-                                      grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
-                                      gap: 30px;
-                                      margin-top: 25px;
-                                    }
-
-                                    .chemical-grid h4 {
-                                      margin-bottom: 8px;
-                                      font-size: 16px;
-                                    }
-
-                                    .chemical-grid ul {
-                                      padding-left: 18px;
-                                    }
-
-                                    .chemical-grid li {
-                                      margin-bottom: 6px;
-                                    }
-
 /* Sections */
 .section {
   padding: 1.6rem 0
@@ -392,7 +306,7 @@ button,
   position: relative;
   color: var(--white);
   font-size: 2rem;
-  margin: 2rem 0 2rem;
+  margin: 0 0 1rem;
   font-weight: 600
 }
 
@@ -422,52 +336,6 @@ button,
   color: var(--muted)
 }
 
-                        /* COMPLIANCE SECTION */
-
-                        .compliance {
-                          color: var(--muted1);
-                          /* padding: 80px 0; */
-                        }
-
-                        .compliance .heading {
-                          /* text-align: center; */
-                          margin-bottom: 30px;
-                          color: #ffffff;
-                        }
-
-                        .compliance p {
-                          max-width: var(--width1);
-                          margin: auto;
-                          text-align: center;
-                        }
-
-                        .compliance ul {
-                          display: grid;
-                          grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
-                          /* gap: 30px; */
-                          /* row-gap: 30px; */
-                          column-gap: 10px;
-                          max-width: var(--width2);
-                          margin: 15px auto auto;
-                          padding: 0;
-                          list-style: none;
-                        }
-
-                        .compliance li {
-                          display: grid;
-                          align-items: center;
-                          background: rgba(255,255,255,0.05);
-                          padding: 14px 18px;
-                          margin-top: 10px;
-                          margin-bottom: 10px;
-                          border-left: 4px solid var(--accent);
-                        }
-
-                        .compliance .muted {
-                          text-align: center;
-                          opacity: 0.8;
-                        }
-
 /* Partners & testimonials */
 .partners ul {
   color: var(--muted);
@@ -490,21 +358,21 @@ button,
 
                           /* Accolades Section */
                           .accolades {
-                            padding: 2rem 0 2rem;
+                            padding: 5rem 0 4rem;
                             background: var(--bg);
                             text-align: center;
                             overflow: hidden;
                           }
 
                           .accolades .container {
-                            max-width: var(--max-w);
+                            max-width: 1100px;
                             margin: 0 auto;
                             padding: 0 1.5rem;
                           }
 
                           .accolades .eyebrow {
                             display: inline-block;
-                            font-size: 0.8rem;
+                            font-size: 0.85rem;
                             font-weight: 600;
                             letter-spacing: 0.12em;
                             text-transform: uppercase;
@@ -513,15 +381,15 @@ button,
                           }
 
                           .accolades .title {
-                            font-size: clamp(1.8rem, 3vw, 2.5rem);
+                            font-size: clamp(1.8rem, 3vw, 2.6rem);
                             font-weight: 700;
                             line-height: 1.25;
                             color: var(--muted1);
-                            margin: 0px auto 1.25rem;
+                            margin-bottom: 1.25rem;
                           }
 
                           .accolades .description {
-                            max-width: var(--width3);
+                            max-width: 860px;
                             margin: 0 auto 3rem;
                             font-size: 1rem;
                             line-height: 1.7;
@@ -682,6 +550,18 @@ button,
             box-shadow: 0 14px 36px rgba(37, 211, 102, 0.45);
           }
 
+          /* Mobile behavior */
+          /* @media (max-width: 768px) {
+            .whatsapp-text {
+              display: none;
+            }
+
+            .whatsapp-float {
+              padding: 12px;
+              border-radius: 50%;
+            }
+          } */
+
 /* Footer */
 .site-footer {
   border-top: 1px solid rgba(255, 255, 255, 0.03);
@@ -723,18 +603,16 @@ button,
 }
 
 @media(max-width:900px) {
-
-}
-
-@media(max-width:900px) {
-    .grid-2 {
+  .grid-2 {
     grid-template-columns: 1fr
   }
 
   .contact-grid {
     grid-template-columns: 1fr
   }
+}
 
+@media(max-width:900px) {
   .nav-links {
     display: none;
     position: absolute;
